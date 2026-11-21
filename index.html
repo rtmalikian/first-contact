@@ -10,92 +10,93 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rtmalikian.github.io/first-contact/">
 <meta name="twitter:card" content="summary">
+<meta name="citation_journal_title" content="First Contact">
+<meta name="citation_publisher" content="First Contact">
 <style>
-:root{--navy:#14406e;--navy2:#1d5aa8;--ink:#1a1a1a;--mut:#5c6670;--line:#d9dee4;
---rule:#9aa7b4;--panel:#f7f9fb;--boxbg:#fbfbf8}
+:root{--navy:#14406e;--navy2:#1d5aa8;--deep:#0e2a47;--ink:#1a1a1a;--mut:#5c6670;--line:#d9dee4;
+--rule:#9aa7b4;--panel:#f7f9fb;--boxbg:#fbfbf8;--gold:#b8860b}
 *{box-sizing:border-box}
 body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#fff;line-height:1.6}
 .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
 a{color:var(--navy2)}
-/* --- journal masthead --- */
-.masthead{border-top:5px solid var(--navy);border-bottom:1px solid var(--ink);padding:20px 0 14px}
-.wordmark{font-size:37px;font-weight:bold;letter-spacing:.01em;color:#0e2a47;line-height:1.05}
-.mast-sub{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);margin-top:5px}
-.journalnav{border-bottom:1px solid var(--line)}
-.journalnav .wrap{display:flex;gap:26px;padding-top:8px;padding-bottom:8px}
-.journalnav a{font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#24313d;text-decoration:none}
-.journalnav a:hover{color:var(--navy2);text-decoration:underline}
-/* --- breadcrumb / type --- */
-.crumb{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;color:var(--mut);margin:18px 0 0}
-.crumb a{color:var(--mut);text-decoration:none} .crumb a:hover{text-decoration:underline}
-.typerow{display:flex;align-items:center;gap:12px;margin:10px 0 0;flex-wrap:wrap}
-.arttype{font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
-.oa{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#14632d;border:1px solid #14632d;border-radius:3px;padding:2px 8px}
-/* --- article header --- */
-.article-head{border-bottom:2px solid var(--ink);padding-bottom:16px}
-h1{font-size:33px;line-height:1.22;margin:14px 0 8px;color:#101c28;font-weight:bold}
-.standfirst{font-size:17.5px;color:#3c4753;margin:0 0 18px}
-.authors{font-size:17px;margin:0 0 3px}
-.authors sup{font-size:11px}
-.affil{font-size:14px;color:#3c4753;margin:0 0 3px}
-.corr{font-size:14px;color:#3c4753;margin:0 0 12px}
-.publine{font-family:Helvetica,Arial,sans-serif;font-size:13.5px;color:#24313d;margin:0 0 5px}
-.citeline{font-size:14.5px;color:#24313d;margin:0}
-/* --- action row --- */
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px}
-.actions a,.actions button{font-family:Helvetica,Arial,sans-serif;font-size:13.5px;font-weight:bold;text-decoration:none;border:1px solid var(--navy);border-radius:3px;padding:8px 16px;color:var(--navy);background:#fff;cursor:pointer}
+.sans{font-family:Helvetica,Arial,sans-serif}
+/* --- utility top bar (publisher style) --- */
+.utilbar{background:#101c28;color:#cfd8e0;font-family:Helvetica,Arial,sans-serif;font-size:12px}
+.utilbar .wrap{display:flex;justify-content:space-between;gap:18px;padding-top:6px;padding-bottom:6px;flex-wrap:wrap}
+.utilbar a{color:#cfd8e0;text-decoration:none;margin-right:16px}
+.utilbar a:hover{color:#fff;text-decoration:underline}
+.utilbar .right a{margin-right:0;margin-left:16px}
+/* --- masthead --- */
+.masthead{border-top:5px solid var(--navy);padding:22px 0 6px}
+.masthead .wrap{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;flex-wrap:wrap}
+.wordmark{font-size:44px;font-weight:bold;letter-spacing:.01em;color:#0e2a47;line-height:1.02}
+.mast-sub{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);margin-top:6px}
+.issnline{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:var(--mut);margin-top:8px}
+.mast-tools{min-width:270px}
+.mast-tools form{display:flex;gap:6px;margin-bottom:10px}
+.mast-tools input[type=search]{flex:1;font-family:Helvetica,Arial,sans-serif;font-size:13.5px;padding:8px 10px;border:1px solid var(--rule);border-radius:3px}
+.mast-tools button{font-family:Helvetica,Arial,sans-serif;font-size:13.5px;font-weight:bold;background:var(--navy);color:#fff;border:1px solid var(--navy);border-radius:3px;padding:8px 14px;cursor:pointer}
+.mast-tools button:hover{background:var(--navy2)}
+.mast-btns{display:flex;gap:8px;flex-wrap:wrap}
+.mast-btns a{font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;text-decoration:none;border:1px solid var(--navy);border-radius:3px;padding:7px 13px;color:var(--navy);background:#fff}
+.mast-btns a.primary{background:var(--navy);color:#fff}
+.mast-btns a:hover{background:#e8eef5}.mast-btns a.primary:hover{background:var(--navy2)}
+/* --- primary section nav --- */
+.journalnav{background:var(--navy);margin-top:14px}
+.journalnav .wrap{display:flex;gap:0;flex-wrap:wrap;padding:0 22px}
+.journalnav a{font-family:Helvetica,Arial,sans-serif;font-size:13.5px;font-weight:bold;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-decoration:none;padding:11px 16px}
+.journalnav a:first-child{padding-left:0}
+.journalnav a:hover{background:var(--navy2);text-decoration:none}
+/* --- hero / latest issue --- */
+.hero{display:grid;grid-template-columns:300px minmax(0,1fr);gap:34px;margin:26px 0 6px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.cover{background:var(--deep);color:#fff;padding:26px 24px 22px;border-top:8px solid var(--gold);min-height:340px;display:flex;flex-direction:column}
+.cover .c-kick{font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b9c9da}
+.cover .c-title{font-size:31px;font-weight:bold;line-height:1.12;margin:10px 0 4px}
+.cover .c-sub{font-size:13.5px;color:#b9c9da;font-style:italic}
+.cover .c-issue{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:20px 0 10px;border-top:1px solid #35506e;padding-top:12px}
+.cover ul{margin:0;padding-left:17px;font-size:13.5px;color:#e6edf4}
+.cover ul li{margin-bottom:5px}
+.cover a{color:#fff}
+.cover .c-foot{margin-top:auto;font-family:Helvetica,Arial,sans-serif;font-size:11.5px;color:#b9c9da;padding-top:14px}
+.featured{border-bottom:2px solid var(--ink);padding-bottom:18px}
+.kicker{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;font-weight:bold;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+.oa{font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#14632d;border:1px solid #14632d;border-radius:3px;padding:2px 7px;margin-left:8px;vertical-align:2px}
+.featured h2{font-size:30px;line-height:1.22;margin:10px 0 8px}
+.featured h2 a{color:#101c28;text-decoration:none}.featured h2 a:hover{color:var(--navy2);text-decoration:underline}
+.teaser{font-size:16.5px;color:#3c4753;margin:0 0 12px}
+.byline{font-size:15.5px;margin:0 0 2px}
+.citeline{font-size:14px;color:#24313d;margin:0 0 4px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 2px}
+.actions a{font-family:Helvetica,Arial,sans-serif;font-size:13.5px;font-weight:bold;text-decoration:none;border:1px solid var(--navy);border-radius:3px;padding:8px 16px;color:var(--navy);background:#fff}
 .actions a.primary{background:var(--navy);color:#fff}
-.actions a:hover,.actions button:hover{background:#e8eef5}
-.actions a.primary:hover{background:var(--navy2)}
-/* --- layout --- */
-.grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;margin-top:22px}
+.actions a:hover{background:#e8eef5}.actions a.primary:hover{background:var(--navy2)}
+/* --- main grid + right rail --- */
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;margin-top:24px}
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
-/* --- article body --- */
-article h2{font-size:21px;color:#101c28;border-bottom:1px solid var(--rule);padding-bottom:5px;margin:36px 0 12px}
-article h2 .secno{color:var(--navy)}
-article h3{font-size:17px;color:#101c28;margin:26px 0 8px}
-article h4{font-size:15px;color:#101c28;margin:20px 0 6px}
-article p{margin:0 0 11px}
-article table{border-collapse:collapse;width:100%;font-size:13px;margin:16px 0;line-height:1.45}
-article th{background:none;color:var(--ink);text-align:left;font-weight:bold;padding:6px 8px;border-top:2.5px solid #101c28;border-bottom:1px solid #101c28}
-article td{border:none;padding:5px 8px;vertical-align:top}
-article tbody tr:last-child td{border-bottom:2.5px solid #101c28}
-article figure{margin:22px 0}
-article figure img{max-width:100%;border:1px solid var(--line)}
-article figcaption{font-size:13.5px;color:#24313d;margin-top:7px;font-family:Helvetica,Arial,sans-serif;line-height:1.5}
-.abstract-panel{background:var(--panel);border:1px solid var(--line);padding:16px 22px 8px;margin:4px 0 10px}
-.abstract-panel h2{border:none;font-size:14px;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:0 0 10px;padding:0;font-family:Helvetica,Arial,sans-serif}
-.keyfindings{background:var(--boxbg);border:1px solid var(--line);border-top:3px solid var(--navy);padding:13px 20px 5px;margin:20px 0}
-.keyfindings h2{border:none;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin:0 0 8px;padding:0;font-family:Helvetica,Arial,sans-serif}
-.keyfindings ul{margin:4px 0 10px;padding-left:20px} .keyfindings li{margin-bottom:6px}
-ol.refs{padding-left:0;list-style-position:outside;margin-left:2.1em}
-ol.refs li{margin-bottom:7px;padding-left:.4em}
-/* --- sidebar rail --- */
+.sec-head{font-size:21px;color:#101c28;border-bottom:2px solid var(--ink);padding-bottom:5px;margin:6px 0 4px}
+.stream{list-style:none;padding-left:0;margin:0}
+.stream li{border-bottom:1px solid var(--line);padding:15px 0}
+.stream .ttl{display:block;font-size:19px;line-height:1.32;margin:4px 0 3px}
+.stream .ttl a{color:#101c28;text-decoration:none}
+.stream .ttl a:hover{color:var(--navy2);text-decoration:underline}
+.stream .auth{font-size:14.5px;margin:0}
+.stream .cite{font-size:13.5px;color:var(--mut);margin:0}
+.stream .tz{font-size:14.5px;color:#3c4753;margin:5px 0 0}
 aside .box{border:1px solid var(--line);background:#fff;padding:14px 16px;margin-bottom:18px}
+aside .box.tint{background:var(--panel)}
 aside h3{margin:0 0 9px;font-size:13px;font-family:Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:6px}
 aside p,aside li{font-size:13.5px}
-aside ul{margin:6px 0;padding-left:18px}
-aside ul.contents{list-style:none;padding-left:0} aside ul.contents li{margin-bottom:5px}
-aside ul.contents a{color:#24313d;text-decoration:none} aside ul.contents a:hover{text-decoration:underline;color:var(--navy2)}
-.dl a.btn{display:block;background:var(--navy);color:#fff;text-align:center;padding:10px;border-radius:3px;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-weight:bold;margin-bottom:8px}
-.dl a.btn:hover{background:var(--navy2)}
-.dl a.alt{background:#fff;color:var(--navy);border:1px solid var(--navy);font-weight:normal}
-.dl p{color:var(--mut);margin:6px 0 0}
-pre{white-space:pre-wrap;font-size:11px;background:#f6f4ef;padding:8px;line-height:1.4}
-button.copy{font-size:12px;cursor:pointer}
-/* --- footer --- */
-footer{border-top:2px solid var(--ink);margin-top:44px;padding:16px 0 36px;font-size:13.5px;color:#3c4753}
-footer .seriesline{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);margin-top:10px}
-@media print{
- .masthead .journalnav,.crumb,.actions,aside,button.copy{display:none}
- .grid{grid-template-columns:1fr}
- body{font-size:11pt;line-height:1.5} a{color:#000;text-decoration:none}
- article h2{break-after:avoid} article table,article figure{break-inside:avoid}
-}
-
-/* --- journal home extras --- */
-.issue{border:1px solid var(--line);margin:26px 0;padding:6px 22px 16px;background:#fff}
-.issue h2{font-size:22px;color:#101c28;border-bottom:2px solid var(--ink);padding-bottom:6px}
+aside ol,aside ul{margin:6px 0;padding-left:18px}
+aside li{margin-bottom:7px}
+aside li a{color:#24313d;text-decoration:none} aside li a:hover{color:var(--navy2);text-decoration:underline}
+aside .metric{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:4px 0;font-size:13.5px}
+aside .metric:last-child{border-bottom:none}
+aside .btn{display:block;background:var(--navy);color:#fff;text-align:center;padding:9px;border-radius:3px;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-weight:bold;font-size:13.5px;margin-top:8px}
+aside .btn:hover{background:var(--navy2)}
+/* --- issue TOCs --- */
+.issue{border:1px solid var(--line);margin:20px 0;padding:6px 22px 16px;background:#fff}
+.issue h3{font-size:20px;color:#101c28;border-bottom:2px solid var(--ink);padding-bottom:6px}
 .toc{list-style:none;padding-left:0;margin:10px 0}
 .toc li{border-bottom:1px solid var(--line);padding:11px 0}
 .toc li:last-child{border-bottom:none}
@@ -104,39 +105,159 @@ footer .seriesline{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-
 .toc .ttl a{color:#101c28;text-decoration:none}
 .toc .ttl a:hover{color:var(--navy2);text-decoration:underline}
 .toc .meta{font-size:13.5px;color:var(--mut)}
-section.block h2{font-size:21px;color:#101c28;border-bottom:1px solid var(--rule);padding-bottom:5px;margin:36px 0 12px}
+section.block h2{font-size:21px;color:#101c28;border-bottom:1px solid var(--rule);padding-bottom:5px;margin:38px 0 12px}
 section.block p,section.block li{font-size:15.5px}
+.covers{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:16px 0}
+@media(max-width:700px){.covers{grid-template-columns:1fr}}
+.minicover{border:1px solid var(--line);border-top:6px solid var(--deep);padding:16px 18px;background:var(--boxbg)}
+.minicover .v{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+.minicover .t{font-size:19px;font-weight:bold;margin:5px 0}
+.minicover p{font-size:14px;color:#3c4753;margin:4px 0}
+/* --- footer --- */
+footer{background:#101c28;color:#cfd8e0;margin-top:48px;padding:30px 0 34px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+@media(max-width:900px){footer .cols{grid-template-columns:1fr 1fr}}
+footer h4{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0} footer li{margin-bottom:6px}
+footer a{color:#cfd8e0;text-decoration:none} footer a:hover{color:#fff;text-decoration:underline}
+footer .base{border-top:1px solid #35506e;margin-top:24px;padding-top:14px;font-size:12.5px;color:#9fb0c0}
+@media print{.utilbar,.mast-tools,.journalnav,aside,footer .cols{display:none}.grid,.hero{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
+<div class="utilbar"><div class="wrap">
+<div><a href="#current-issue">Journals</a><a href="#archive">All issues</a><a href="#for-authors">For Authors</a><a href="#about">About us</a><a href="https://github.com/rtmalikian">Publisher: Malikian Evidence Review</a></div>
+<div class="right"><a href="#alerts">Sign up for alerts</a><a href="https://orcid.org/0009-0008-4326-4205">Editor ORCID</a></div>
+</div></div>
+
 <div class="masthead"><div class="wrap">
+<div>
 <div class="wordmark">First Contact</div>
 <div class="mast-sub">Open Journal of Clinical AI and Primary Care Evidence Synthesis</div>
+<div class="issnline">ISSN: pending &middot; Monthly &middot; Open Access &middot; Volume 1, 2026 &middot; Palmdale, California, USA</div>
+</div>
+<div class="mast-tools">
+<form action="https://www.google.com/search" method="get" role="search">
+<input type="search" name="q" placeholder="Search this journal" aria-label="Search this journal">
+<input type="hidden" name="sitesearch" value="rtmalikian.github.io">
+<button type="submit">Search</button>
+</form>
+<div class="mast-btns">
+<a class="primary" href="#alerts">Sign up for alerts</a>
+<a href="#for-authors">Submit a manuscript</a>
+</div>
+</div>
 </div></div>
+
 <nav class="journalnav"><div class="wrap">
 <a href="#current-issue">Current Issue</a>
 <a href="#archive">Archive</a>
+<a href="#latest">Research</a>
+<a href="#current-issue">Reviews</a>
+<a href="#archive">Comment</a>
+<a href="#current-issue">Methods</a>
+<a href="#for-authors">For Authors</a>
 <a href="#about">About</a>
-<a href="https://github.com/rtmalikian/first-contact">GitHub</a>
 </div></nav>
+
 <div class="wrap">
-<p class="crumb">Monthly &middot; Open Access &middot; Volume 1, 2026</p>
-<header class="article-head">
-<h1>First Contact — Open Journal of Clinical AI and Primary Care Evidence Synthesis</h1>
-<p class="standfirst">A monthly open-access journal of clinical AI, family medicine and primary care — evidence synthesis and open-source methods, built in the open.</p>
-<p class="corr">Editor: Raphael Malikian, <a href="mailto:rtmalikian@gmail.com">rtmalikian@gmail.com</a> &middot; ORCID <a href="https://orcid.org/0009-0008-4326-4205">0009-0008-4326-4205</a> &middot; Palmdale, CA, USA</p>
-<p class="publine">Volume 1 &middot; Issue 1: October 2026 &middot; Issue 2: November 2026</p>
-</header>
+
+<div class="hero">
+<div class="cover">
+<div class="c-kick">Latest issue</div>
+<div class="c-title">First Contact</div>
+<div class="c-sub">Open Journal of Clinical AI and Primary Care Evidence Synthesis</div>
+<div class="c-issue">Volume 1, Issue 2<br>November 2026</div>
+<ul>
+<li>LLM clinical summaries: errors per summary</li>
+<li>Unsafe advice from patient-facing chatbots</li>
+<li>High-dose vitamin C in cancer</li>
+<li>Loss of taste in viral infection</li>
+<li>Synthetic patients and Synthea</li>
+<li>Multi-agent peer review — methods</li>
+</ul>
+<div class="c-foot">7 articles &middot; pp. 78&ndash;281 and continuing &middot; <a href="#current-issue">Browse this issue</a></div>
+</div>
+
+<div class="featured">
+<span class="kicker">Featured article &middot; Systematic Review</span><span class="oa">Open Access</span>
+<h2><a href="https://rtmalikian.github.io/viral-taste-loss-systematic-review/">Loss of taste in possible viral infection: etiologies, pathogenesis, and the evidence for treatments</a></h2>
+<p class="teaser">Loss or distortion of taste is a recognised accompaniment of viral infections and was reported very widely during the COVID-19 pandemic. Where most early syntheses pooled smell and taste together and counted frequency only, this review separates them — asking which viruses are associated, what mechanisms have been proposed, and what interventions have actually been studied, with effects, doses and harms.</p>
+<p class="byline">Raphael Malikian</p>
+<p class="citeline"><em>First Contact</em> 2026;1(2). DOI: <a href="https://doi.org/10.5281/zenodo.24418147">10.5281/zenodo.24418147</a></p>
+<div class="actions">
+<a class="primary" href="https://rtmalikian.github.io/viral-taste-loss-systematic-review/">Read the full article</a>
+<a href="https://github.com/rtmalikian/viral-taste-loss-systematic-review">Article repository</a>
+</div>
+</div>
+</div>
+
+<div class="grid">
+<main>
+<h2 class="sec-head" id="latest">Latest articles</h2>
+<ol class="stream">
+<li><span class="kicker">Review &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-clinical-summarization-errors-meta-analysis/">Clinically Significant Errors in Large Language Model-Generated Clinical Summaries: A Systematic Review and Meta-analysis of Omissions, Inaccuracies and Fabrications per Summary</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(2):78&ndash;117 &middot; November 2026</p><p class="tz">How often do LLM-generated clinical summaries omit, distort or fabricate — counted per summary, across the published evaluation literature.</p></li>
+<li><span class="kicker">Review &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-chatbot-unsafe-advice-primary-care-meta-analysis/">Unsafe or potentially unsafe advice from patient-facing large language model chatbots in bench evaluations of primary-care question sets: a systematic review and meta-analysis</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(2):118&ndash;147 &middot; November 2026</p><p class="tz">A pooled look at bench evaluations of patient-facing chatbots answering primary-care questions — and how often the advice was judged unsafe.</p></li>
+<li><span class="kicker">Review &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">High-dose vitamin C in people with cancer: a Cochrane-level systematic review and meta-analysis of oral and intravenous ascorbate for treatment outcomes, quality of life and harms</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(2):148&ndash;166 &middot; November 2026 &middot; DOI: 10.5281/zenodo.24213997</p><p class="tz">Decades of claims for high-dose ascorbate in cancer, tested against the trial evidence for outcomes, quality of life and harms.</p></li>
+<li><span class="kicker">Research &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/synthetic-patients-synthea-what-they-teach/">Synthetic Patients and What They Can and Cannot Teach: A Retrospective Analysis of Open-Source Contributions to Synthea</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(2):266&ndash;281 &middot; November 2026 &middot; DOI: 10.5281/zenodo.23964017</p><p class="tz">What building for the Synthea synthetic-patient ecosystem shows about what synthetic data can — and cannot — teach clinical AI.</p></li>
+<li><span class="kicker">Review &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Ambient artificial intelligence scribes for clinical documentation: effects on documentation time, after-hours work, clinician burnout, note quality and note errors — A systematic review and meta-analysis</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(1):1&ndash;43 &middot; October 2026 &middot; DOI: 10.5281/zenodo.23565499</p><p class="tz">Do ambient AI scribes actually save time and reduce burnout — and what do they do to the quality and accuracy of the note?</p></li>
+<li><span class="kicker">Review &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Fabricated and inaccurate citations generated by large language models for biomedical topics: a systematic review and meta-analysis</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(1):44&ndash;77 &middot; October 2026 &middot; DOI: 10.5281/zenodo.23585717</p><p class="tz">How often do LLMs invent or corrupt the biomedical references they cite — a meta-analysis of the verification studies.</p></li>
+<li><span class="kicker">Research &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-tooling-agent-infra-quiet-failures/">When Agent Plumbing Fails Quietly: A Retrospective Analysis of Open-Source Contributions to LLM Tooling and Agent Infrastructure</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(1):253&ndash;265 &middot; October 2026 &middot; DOI: 10.5281/zenodo.23741622</p><p class="tz">The failures that don't crash — silent defects in LLM tooling and agent infrastructure, found by contributing to the code itself.</p></li>
+<li><span class="kicker">Comment</span><span class="ttl"><a href="https://rtmalikian.github.io/direct-primary-care-outcomes-evidence-gap/">Eighty-Three Percent Growth, Thirty-Eight Papers: Direct Primary Care and the Outcomes Accounting It Owes</a></span><p class="auth">Raphael Malikian</p><p class="cite"><em>First Contact</em> 2026;1(1) &middot; October 2026 &middot; DOI: 10.5281/zenodo.23562906</p><p class="tz">Direct primary care is growing fast; its published outcomes evidence is not keeping pace. A commentary on the accounting owed.</p></li>
+</ol>
+<p class="sans" style="font-size:13.5px"><a href="#current-issue">See the full current issue &rarr;</a> &middot; <a href="#archive">Browse the archive &rarr;</a></p>
+</main>
+
+<aside>
+<div class="box tint" id="alerts">
+<h3>Email alerts</h3>
+<p>New issues monthly. Email the editor to be added to the new-issue alert list.</p>
+<a class="btn" href="mailto:rtmalikian@gmail.com?subject=First%20Contact%20%E2%80%94%20new%20issue%20alerts">Sign up for alerts</a>
+</div>
+<div class="box">
+<h3>Most read</h3>
+<ol>
+<li><a href="https://rtmalikian.github.io/viral-taste-loss-systematic-review/">Loss of taste in possible viral infection: etiologies, pathogenesis, and the evidence for treatments</a></li>
+<li><a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Ambient artificial intelligence scribes for clinical documentation</a></li>
+<li><a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Fabricated and inaccurate citations generated by large language models for biomedical topics</a></li>
+<li><a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">High-dose vitamin C in people with cancer</a></li>
+<li><a href="https://rtmalikian.github.io/direct-primary-care-outcomes-evidence-gap/">Eighty-Three Percent Growth, Thirty-Eight Papers: Direct Primary Care and the Outcomes Accounting It Owes</a></li>
+</ol>
+</div>
+<div class="box">
+<h3>Journal at a glance</h3>
+<div class="metric"><span>Articles published</span><strong>16</strong></div>
+<div class="metric"><span>Issues</span><strong>2 (Vol 1)</strong></div>
+<div class="metric"><span>Frequency</span><strong>Monthly</strong></div>
+<div class="metric"><span>Access</span><strong>Open access</strong></div>
+<div class="metric"><span>Article DOIs</span><strong>Zenodo</strong></div>
+<div class="metric"><span>Impact factor</span><strong>Not yet assigned</strong></div>
+</div>
+<div class="box">
+<h3>Editor</h3>
+<p><strong>Raphael Malikian</strong><br>Editor and corresponding author<br>
+<a href="mailto:rtmalikian@gmail.com">rtmalikian@gmail.com</a><br>
+ORCID <a href="https://orcid.org/0009-0008-4326-4205">0009-0008-4326-4205</a><br>
+Independent Researcher, Palmdale, CA, USA</p>
+</div>
+<div class="box">
+<h3>For authors</h3>
+<p>Submissions are currently the editor's own programme of work; the journal publishes systematic reviews, retrospective analyses, commentaries and methods papers in clinical AI and primary care.</p>
+<p><a href="#for-authors">Author information &rarr;</a></p>
+</div>
+</aside>
+</div>
 
 <section class="block" id="current-issue">
 <h2>Current Issue — Volume 1, Issue 2, November 2026</h2>
 <div class="issue">
 <ol class="toc">
-<li><span class="ch">Chapter 1 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-clinical-summarization-errors-meta-analysis/">Clinically Significant Errors in Large Language Model-Generated Clinical Summaries: A Systematic Review and Meta-analysis of Omissions, Inaccuracies and Fabrications per Summary</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/llm-clinical-summarization-errors-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-clinical-summarization-errors-meta-analysis">GitHub</a></span></li>
-<li><span class="ch">Chapter 2 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-chatbot-unsafe-advice-primary-care-meta-analysis/">Unsafe or potentially unsafe advice from patient-facing large language model chatbots in bench evaluations of primary-care question sets: a systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/llm-chatbot-unsafe-advice-primary-care-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-chatbot-unsafe-advice-primary-care-meta-analysis">GitHub</a></span></li>
-<li><span class="ch">Chapter 3 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">High-dose vitamin C in people with cancer: a Cochrane-level systematic review and meta-analysis of oral and intravenous ascorbate for treatment outcomes, quality of life and harms</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/high-dose-vitamin-c-cancer-meta-analysis">GitHub</a></span></li>
+<li><span class="ch">Chapter 1 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-clinical-summarization-errors-meta-analysis/">Clinically Significant Errors in Large Language Model-Generated Clinical Summaries: A Systematic Review and Meta-analysis of Omissions, Inaccuracies and Fabrications per Summary</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(2):78&ndash;117 &middot; <a href="https://rtmalikian.github.io/llm-clinical-summarization-errors-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-clinical-summarization-errors-meta-analysis">GitHub</a></span></li>
+<li><span class="ch">Chapter 2 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-chatbot-unsafe-advice-primary-care-meta-analysis/">Unsafe or potentially unsafe advice from patient-facing large language model chatbots in bench evaluations of primary-care question sets: a systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(2):118&ndash;147 &middot; <a href="https://rtmalikian.github.io/llm-chatbot-unsafe-advice-primary-care-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-chatbot-unsafe-advice-primary-care-meta-analysis">GitHub</a></span></li>
+<li><span class="ch">Chapter 3 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">High-dose vitamin C in people with cancer: a Cochrane-level systematic review and meta-analysis of oral and intravenous ascorbate for treatment outcomes, quality of life and harms</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(2):148&ndash;166 &middot; <a href="https://rtmalikian.github.io/high-dose-vitamin-c-cancer-meta-analysis/">Read article</a> &middot; <a href="https://github.com/rtmalikian/high-dose-vitamin-c-cancer-meta-analysis">GitHub</a></span></li>
 <li><span class="ch">Chapter 4 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/viral-taste-loss-systematic-review/">Loss of taste in possible viral infection: etiologies, pathogenesis, and the evidence for treatments</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/viral-taste-loss-systematic-review/">Read article</a> &middot; <a href="https://github.com/rtmalikian/viral-taste-loss-systematic-review">GitHub</a></span></li>
-<li><span class="ch">Chapter 5 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/synthetic-patients-synthea-what-they-teach/">Synthetic Patients and What They Can and Cannot Teach: A Retrospective Analysis of Open-Source Contributions to Synthea</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/synthetic-patients-synthea-what-they-teach/">Read article</a> &middot; <a href="https://github.com/rtmalikian/synthetic-patients-synthea-what-they-teach">GitHub</a></span></li>
+<li><span class="ch">Chapter 5 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/synthetic-patients-synthea-what-they-teach/">Synthetic Patients and What They Can and Cannot Teach: A Retrospective Analysis of Open-Source Contributions to Synthea</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(2):266&ndash;281 &middot; <a href="https://rtmalikian.github.io/synthetic-patients-synthea-what-they-teach/">Read article</a> &middot; <a href="https://github.com/rtmalikian/synthetic-patients-synthea-what-they-teach">GitHub</a></span></li>
 <li><span class="ch">Chapter 6 &middot; Methods Paper</span><span class="ttl"><a href="https://rtmalikian.github.io/multi-agent-peer-review-system-clinical-ai-medical-research/">Multi-Agent Peer Review System for Clinical AI, Medical Research and Health Technology Papers: persona-based AI reviewers and looped editorial gates before preprint submission</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/multi-agent-peer-review-system-clinical-ai-medical-research/">Read article</a> &middot; <a href="https://github.com/rtmalikian/multi-agent-peer-review-system-clinical-ai-medical-research">GitHub</a></span></li>
 <li><span class="ch">Chapter 7 &middot; Methods Paper</span><span class="ttl"><a href="https://rtmalikian.github.io/multi-agent-cochrane-level-review-process/">Multi-Agent Cochrane-Level Review Process (Robust Standard v2)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/multi-agent-cochrane-level-review-process/">Read article</a> &middot; <a href="https://github.com/rtmalikian/multi-agent-cochrane-level-review-process">GitHub</a></span></li>
 </ol>
@@ -147,16 +268,22 @@ section.block p,section.block li{font-size:15.5px}
 <h2>Archive — Volume 1, Issue 1, October 2026</h2>
 <div class="issue">
 <ol class="toc">
-<li><span class="ch">Chapter 1 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/clinical-nlp-deidentification-open-source/">Guarding the Clinical Narrative: A Practitioner-Contributor's Retrospective Analysis of Open-Source Contributions to Clinical Natural Language Processing and Health-Data De-identification (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/clinical-nlp-deidentification-open-source/">Read article</a> &middot; <a href="https://github.com/rtmalikian/clinical-nlp-deidentification-open-source">GitHub</a></span></li>
-<li><span class="ch">Chapter 2 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/medical-imaging-dicom-open-source-reliability/">Silent Failures in the Imaging Stack: A Retrospective Analysis of Open-Source Contributions to Medical Imaging Software: DICOM Geometry, Warnings Discipline, and Pipeline Reliability (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/medical-imaging-dicom-open-source-reliability/">Read article</a> &middot; <a href="https://github.com/rtmalikian/medical-imaging-dicom-open-source-reliability">GitHub</a></span></li>
-<li><span class="ch">Chapter 3 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/vector-databases-rag-clinical-ai-infrastructure/">Retrieval Is the New Record System: A Retrospective Analysis of Open-Source Contributions to Vector Databases and Embedding Infrastructure Underpinning Clinical AI (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/vector-databases-rag-clinical-ai-infrastructure/">Read article</a> &middot; <a href="https://github.com/rtmalikian/vector-databases-rag-clinical-ai-infrastructure">GitHub</a></span></li>
-<li><span class="ch">Chapter 4 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/fhir-health-data-infrastructure-open-source/">The Plumbing Layer: A Retrospective Analysis of Open-Source Contributions to FHIR Servers, Synthetic Patient Data, and Federated Research Infrastructure (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/fhir-health-data-infrastructure-open-source/">Read article</a> &middot; <a href="https://github.com/rtmalikian/fhir-health-data-infrastructure-open-source">GitHub</a></span></li>
-<li><span class="ch">Chapter 5 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-tooling-agent-infra-quiet-failures/">When Agent Plumbing Fails Quietly: A Retrospective Analysis of Open-Source Contributions to LLM Tooling and Agent Infrastructure</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/llm-tooling-agent-infra-quiet-failures/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-tooling-agent-infra-quiet-failures">GitHub</a></span></li>
+<li><span class="ch">Chapter 1 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/clinical-nlp-deidentification-open-source/">Guarding the Clinical Narrative: A Practitioner-Contributor's Retrospective Analysis of Open-Source Contributions to Clinical Natural Language Processing and Health-Data De-identification (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):167&ndash;187 &middot; <a href="https://rtmalikian.github.io/clinical-nlp-deidentification-open-source/">Read article</a> &middot; <a href="https://github.com/rtmalikian/clinical-nlp-deidentification-open-source">GitHub</a></span></li>
+<li><span class="ch">Chapter 2 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/medical-imaging-dicom-open-source-reliability/">Silent Failures in the Imaging Stack: A Retrospective Analysis of Open-Source Contributions to Medical Imaging Software: DICOM Geometry, Warnings Discipline, and Pipeline Reliability (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):188&ndash;206 &middot; <a href="https://rtmalikian.github.io/medical-imaging-dicom-open-source-reliability/">Read article</a> &middot; <a href="https://github.com/rtmalikian/medical-imaging-dicom-open-source-reliability">GitHub</a></span></li>
+<li><span class="ch">Chapter 3 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/vector-databases-rag-clinical-ai-infrastructure/">Retrieval Is the New Record System: A Retrospective Analysis of Open-Source Contributions to Vector Databases and Embedding Infrastructure Underpinning Clinical AI (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):207&ndash;229 &middot; <a href="https://rtmalikian.github.io/vector-databases-rag-clinical-ai-infrastructure/">Read article</a> &middot; <a href="https://github.com/rtmalikian/vector-databases-rag-clinical-ai-infrastructure">GitHub</a></span></li>
+<li><span class="ch">Chapter 4 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/fhir-health-data-infrastructure-open-source/">The Plumbing Layer: A Retrospective Analysis of Open-Source Contributions to FHIR Servers, Synthetic Patient Data, and Federated Research Infrastructure (2025-2026)</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):230&ndash;252 &middot; <a href="https://rtmalikian.github.io/fhir-health-data-infrastructure-open-source/">Read article</a> &middot; <a href="https://github.com/rtmalikian/fhir-health-data-infrastructure-open-source">GitHub</a></span></li>
+<li><span class="ch">Chapter 5 &middot; Retrospective Analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-tooling-agent-infra-quiet-failures/">When Agent Plumbing Fails Quietly: A Retrospective Analysis of Open-Source Contributions to LLM Tooling and Agent Infrastructure</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):253&ndash;265 &middot; <a href="https://rtmalikian.github.io/llm-tooling-agent-infra-quiet-failures/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-tooling-agent-infra-quiet-failures">GitHub</a></span></li>
 <li><span class="ch">Chapter 6 &middot; Commentary</span><span class="ttl"><a href="https://rtmalikian.github.io/direct-primary-care-outcomes-evidence-gap/">Eighty-Three Percent Growth, Thirty-Eight Papers: Direct Primary Care and the Outcomes Accounting It Owes</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/direct-primary-care-outcomes-evidence-gap/">Read article</a> &middot; <a href="https://github.com/rtmalikian/direct-primary-care-outcomes-evidence-gap">GitHub</a></span></li>
 <li><span class="ch">Chapter 7 &middot; Commentary</span><span class="ttl"><a href="https://rtmalikian.github.io/boomerang-effect-kratom-7oh/">When a Warning Advertises: The Boomerang Effect in Anti-Drug Campaigns and the Case of Concentrated 7-Hydroxymitragynine</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/boomerang-effect-kratom-7oh/">Read article</a> &middot; <a href="https://github.com/rtmalikian/boomerang-effect-kratom-7oh">GitHub</a></span></li>
-<li><span class="ch">Chapter 8 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Ambient artificial intelligence scribes for clinical documentation: effects on documentation time, after-hours work, clinician burnout, note quality and note errors — A systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Read article</a> &middot; <a href="https://github.com/rtmalikian/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors">GitHub</a></span></li>
-<li><span class="ch">Chapter 9 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Fabricated and inaccurate citations generated by large language models for biomedical topics: a systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026 &middot; pp. X&ndash;Y &middot; <a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations">GitHub</a></span></li>
+<li><span class="ch">Chapter 8 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Ambient artificial intelligence scribes for clinical documentation: effects on documentation time, after-hours work, clinician burnout, note quality and note errors — A systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):1&ndash;43 &middot; <a href="https://rtmalikian.github.io/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors/">Read article</a> &middot; <a href="https://github.com/rtmalikian/ambient-ai-scribes-meta-analysis-clinical-documentation-burnout-note-errors">GitHub</a></span></li>
+<li><span class="ch">Chapter 9 &middot; Systematic Review &amp; Meta-analysis</span><span class="ttl"><a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Fabricated and inaccurate citations generated by large language models for biomedical topics: a systematic review and meta-analysis</a></span><span class="meta">Raphael Malikian &middot; First Contact. 2026;1(1):44&ndash;77 &middot; <a href="https://rtmalikian.github.io/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations/">Read article</a> &middot; <a href="https://github.com/rtmalikian/llm-citation-fabrication-meta-analysis-biomedical-references-hallucinated-citations">GitHub</a></span></li>
 </ol>
+</div>
+
+<h3 style="margin-top:30px">All issues — Volume 1 (2026)</h3>
+<div class="covers">
+<div class="minicover"><div class="v">Volume 1 &middot; Issue 2</div><div class="t">November 2026 — Current Issue</div><p>7 articles: three systematic reviews, the viral taste-loss review, Synthea retrospective, and two methods papers. pp. 78&ndash;281 and continuing.</p><p><a href="#current-issue">View issue contents &rarr;</a></p></div>
+<div class="minicover"><div class="v">Volume 1 &middot; Issue 1</div><div class="t">October 2026</div><p>9 articles: five retrospective analyses of open-source clinical AI infrastructure, two commentaries, and two systematic reviews. pp. 1&ndash;265 and continuing.</p><p><a href="#archive">View issue contents &rarr;</a></p></div>
 </div>
 </section>
 
@@ -172,15 +299,46 @@ section.block p,section.block li{font-size:15.5px}
 <li><strong>Methods Papers</strong> — how the research is made: review processes, peer-review systems and reproducibility methods.</li>
 </ul>
 <h3>Editorial and peer review</h3>
-<p>Editor: Raphael Malikian. Before publication, every manuscript undergoes a structured multi-agent pre-submission peer review — a panel of persona-based reviewers working through looped editorial gates — under the editor's sole accountability as author and editor. Review reports are published with the article's repository. This is pre-submission review conducted in the open; it is described honestly as such, and no article claims external journal peer review it has not had.</p>
+<p>Editor: Raphael Malikian. Before publication, every manuscript undergoes a structured multi-agent pre-submission peer review — a panel of persona-based reviewers, including a dedicated skeptic, working through fix-and-re-review loops until no blocker or major issue remains open — under the editor's sole accountability as author and editor. Review reports are published with the article's repository. This is pre-submission review conducted in the open; it is described honestly as such, and no article claims external journal peer review it has not had.</p>
 <h3>Citing articles in this journal</h3>
 <p>Malikian R. [Article title]. <em>First Contact</em>. 2026;1(1 or 2):[pages]. DOI: [the article's Zenodo DOI, as given on its landing page].</p>
 </section>
 
-<footer>
-<p><em>First Contact</em> — Open Journal of Clinical AI and Primary Care Evidence Synthesis. Open access; individual articles carry their stated licences and Zenodo DOIs.</p>
-<p class="seriesline">First Contact &middot; Volume 1, 2026 &middot; Monthly</p>
-</footer>
+<section class="block" id="for-authors">
+<h2>For Authors</h2>
+<p><em>First Contact</em> currently publishes the editor's own programme of systematic reviews, retrospective analyses, commentaries and methods papers in clinical AI, family medicine and primary care. Every article is open access, carries a Zenodo DOI, and is published with its full text, data and code in a public GitHub repository. Manuscripts pass the journal's multi-agent pre-submission peer review — a reviewer panel with a dedicated skeptic, in looped editorial gates — before they appear. Enquiries: <a href="mailto:rtmalikian@gmail.com">rtmalikian@gmail.com</a>.</p>
+</section>
+
 </div>
+
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Journal</h4><ul>
+<li><a href="#about">About First Contact</a></li>
+<li><a href="#about">Aims &amp; scope</a></li>
+<li><a href="#about">Editorial &amp; peer review</a></li>
+<li><a href="#for-authors">For authors</a></li>
+</ul></div>
+<div><h4>Content</h4><ul>
+<li><a href="#current-issue">Current issue</a></li>
+<li><a href="#archive">Archive / all issues</a></li>
+<li><a href="#latest">Latest articles</a></li>
+<li><a href="#current-issue">Reviews &amp; methods</a></li>
+</ul></div>
+<div><h4>Connect</h4><ul>
+<li><a href="https://github.com/rtmalikian/first-contact">Journal on GitHub</a></li>
+<li><a href="https://github.com/rtmalikian">Editor on GitHub</a></li>
+<li><a href="https://orcid.org/0009-0008-4326-4205">Editor ORCID</a></li>
+<li><a href="mailto:rtmalikian@gmail.com">Contact the editor</a></li>
+</ul></div>
+<div><h4>Editorial office</h4><ul>
+<li>Editor: Raphael Malikian</li>
+<li>Palmdale, CA, USA</li>
+<li>Monthly &middot; Open access</li>
+<li>ISSN: pending</li>
+</ul></div>
+</div>
+<div class="base"><em>First Contact</em> — Open Journal of Clinical AI and Primary Care Evidence Synthesis. Open access; individual articles carry their stated licences and Zenodo DOIs. &copy; 2026 Raphael Malikian. &middot; First Contact &middot; Volume 1, 2026 &middot; Monthly</div>
+</div></footer>
 </body>
 </html>
